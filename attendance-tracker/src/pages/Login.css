@@ -1,0 +1,90 @@
+.login-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow-lg);
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+
+.login-logo h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--blue-primary);
+  margin-bottom: 0.25rem;
+}
+
+.login-logo p { color: var(--gray-500); font-size: 0.875rem; }
+
+.login-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.form-group input {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--blue-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-group input:disabled { background: var(--gray-50); cursor: not-allowed; }
+
+.login-btn {
+  background: var(--blue-primary);
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 0.25rem;
+}
+
+.login-btn:hover:not(:disabled) { background: #1e40af; transform: translateY(-1px); }
+.login-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.login-footer {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
+.login-footer a { color: var(--blue-primary); font-weight: 600; }
+
+.forgot-link {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+.forgot-link:hover { color: var(--blue-primary); }

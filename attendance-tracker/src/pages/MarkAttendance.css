@@ -1,0 +1,180 @@
+.mark-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.mark-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.mark-logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.mark-logo .logo-icon { font-size: 2.5rem; }
+
+.mark-logo h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blue-primary);
+  margin: 0.4rem 0 0.2rem;
+}
+
+.mark-logo p { font-size: 0.85rem; color: var(--gray-500); }
+
+.mark-session-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--blue-pale);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.mark-subject {
+  font-weight: 700;
+  color: var(--blue-primary);
+  font-size: 1rem;
+}
+
+.mark-timer {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--green);
+  background: var(--green-light);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+}
+
+.timer-urgent {
+  color: var(--red);
+  background: var(--red-light);
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.mark-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.form-group input {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus { border-color: var(--blue-light); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+.form-group input:disabled { background: var(--gray-50); cursor: not-allowed; }
+
+.input-readonly {
+  background: var(--gray-50) !important;
+  color: var(--gray-500);
+  cursor: default !important;
+}
+
+.mark-submit {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1rem;
+}
+
+.mark-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.mark-success span { font-size: 3rem; }
+.mark-success p { font-size: 1rem; font-weight: 600; color: var(--green); }
+
+.mark-error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.mark-error-icon { font-size: 2.5rem; }
+.mark-error-state p { color: var(--red); font-weight: 500; }
+
+.mark-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  color: var(--gray-500);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--gray-200);
+  border-top-color: var(--blue-light);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Mobile fixes ── */
+@media (max-width: 480px) {
+  .mark-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .mark-logo h1 { font-size: 1.1rem; }
+
+  .mark-session-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .form-group input {
+    font-size: 1rem; /* prevent iOS zoom */
+    padding: 0.75rem;
+  }
+
+  .mark-submit { font-size: 1rem; padding: 0.9rem; }
+}

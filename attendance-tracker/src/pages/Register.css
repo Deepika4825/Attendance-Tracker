@@ -1,0 +1,7 @@
+.register-card { max-width: 480px; }
+
+.reg-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
