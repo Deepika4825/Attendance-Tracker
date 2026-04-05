@@ -11,13 +11,7 @@ export default defineConfig({
       '127.0.0.1',
       '.ngrok-free.app',
       '.ngrok-free.dev',
-      '.ngrok.io',
+      '.vercel.app',
     ],
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-      },
-    },
   },
 })
