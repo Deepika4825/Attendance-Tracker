@@ -12,7 +12,10 @@ const classRoutes = require('./routes/class')
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: (origin, cb) => cb(null, true),
+  credentials: true,
+}))
 app.use(express.json())
 
 // Routes
